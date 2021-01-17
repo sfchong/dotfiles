@@ -7,6 +7,9 @@ set autoindent
 " Search non-case sensitive, unless type capital letter
 set smartcase
 
+" Highlight searc
+set hlsearch
+
 " Word Wrap
 set wrap
 
