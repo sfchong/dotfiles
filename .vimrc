@@ -35,4 +35,5 @@ set statusline+=%l     " current line number
 set statusline+=/      " seperator
 set statusline+=%L     " total lines
 
-"test symb link comment
+" Set tab to space
+set ts=4 sw=4 sts=4 et
