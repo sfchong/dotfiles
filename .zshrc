@@ -9,3 +9,4 @@ alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
 
 # GO Path
 export GOPATH=$HOME/go-workspace
+export PATH=$PATH:$GOPATH/bin
