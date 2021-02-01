@@ -7,6 +7,9 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%m %{$fg[cyan]%
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
 
+# Homebrew Path
+export PATH=$PATH:/opt/homebrew/bin
+
 # GO Path
 export GOPATH=$HOME/go-workspace
 export PATH=$PATH:$GOPATH/bin
