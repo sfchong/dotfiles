@@ -20,6 +20,7 @@ PS1='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%m %{$fg[cyan]%
 # Alias
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
+alias zshr='source ~/.zshrc'
 
 # GO Path
 export GOPATH=$HOME/go-workspace
