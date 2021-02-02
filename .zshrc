@@ -4,7 +4,7 @@ autoload -Uz vcs_info
 # vcs_info prompt config
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git*' formats " (%b) %m%u%c"
+zstyle ':vcs_info:git*' formats " (%b)%m%u%c"
 zstyle ':vcs_info:*' stagedstr '%{%F{green}%B%}●%{%b%f%}'
 zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}●%{%b%f%}'
 precmd() {
