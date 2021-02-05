@@ -4,7 +4,7 @@
 [alias]
     aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort    # list all aliases
 	st = status
-	ci = commit
+	cm = commit
 	cp = cherry-pick
 	br = branch
 	co = checkout
