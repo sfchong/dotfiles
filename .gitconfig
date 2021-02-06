@@ -10,4 +10,4 @@
 	co = checkout
 	df = diff -C --color-words
 	pl = pull
-	ps = push
+	p = push
