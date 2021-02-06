@@ -6,7 +6,7 @@
 	st = status
 	cm = commit
 	cp = cherry-pick
-	br = branch
+	br = branch -v
 	co = checkout
 	df = diff -C --color-words
 	pl = pull
