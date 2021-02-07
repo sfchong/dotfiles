@@ -2,7 +2,7 @@ window:
   padding:
     x: 10
     y: 5
-  title: terminal
+  dynamic_title: true
 
 # Colors (Tomorrow Night)
 colors:
