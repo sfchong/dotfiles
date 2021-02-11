@@ -20,6 +20,7 @@ PS1='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%m %{$fg[cyan]%
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 zmodload zsh/complist
 compinit
 
