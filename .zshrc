@@ -29,6 +29,9 @@ alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
 alias zshr='source ~/.zshrc'
 
+# Add arm64 homebrew path
+eval $(/opt/homebrew/bin/brew shellenv)
+
 # GO Path
 export GOPATH=$HOME/go-workspace
 
