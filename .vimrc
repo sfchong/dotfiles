@@ -1,6 +1,9 @@
 " Set relative line number
 set relativenumber
 
+" Set line number color
+highlight LineNr ctermfg=grey
+
 " Autoindent
 set autoindent
 
