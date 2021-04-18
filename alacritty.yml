@@ -1,8 +1,10 @@
 window:
   padding:
-    x: 0
+    x: 5
     y: 0
   dynamic_title: true
+
+background_opacity: 0.95
 
 # Colors (Tomorrow Night)
 colors:
