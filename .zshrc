@@ -15,7 +15,8 @@ precmd() {
 setopt prompt_subst
 
 # Custom prompt
-PS1='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%m %{$fg[cyan]%}%~%{$fg[green]%}${vcs_info_msg_0_}%{$fg[red]%}]%{$reset_color%}$%b '
+#PS1='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%m %{$fg[cyan]%}%~%{$fg[green]%}${vcs_info_msg_0_}%{$fg[red]%}]%{$reset_color%}$%b '
+PS1='%B%{$fg[cyan]%}%~%{$fg[green]%}${vcs_info_msg_0_} %{$reset_color%}$%b '
 
 # Basic auto/tab complete:
 autoload -U compinit
