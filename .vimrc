@@ -8,6 +8,7 @@ highlight LineNr ctermfg=grey
 set autoindent
 
 " Search non-case sensitive, unless type capital letter
+set ignorecase
 set smartcase
 
 " Highlight searc
