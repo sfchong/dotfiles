@@ -1,8 +1,15 @@
+set nocompatible
+
+" Load plugin
+call plug#begin()
+Plug 'sheerun/vim-polyglot'
+call plug#end()
+
+" Set colorscheme
+colorscheme onedark
+
 " Set relative line number
 set relativenumber
-
-" Set line number color
-highlight LineNr ctermfg=grey
 
 " Autoindent
 set autoindent
