@@ -9,7 +9,10 @@ call plug#end()
 colorscheme onedark
 
 " Set relative line number
-set relativenumber
+set number relativenumber
+
+" Copy to system clipboard
+set clipboard+=unnamed
 
 " Autoindent
 set autoindent
