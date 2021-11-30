@@ -11,3 +11,4 @@
 	df = diff -C --color-words
 	pl = pull
 	p = push
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit
