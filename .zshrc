@@ -40,6 +40,7 @@ export GOPATH=$HOME/go-workspace
 # Path
 export PATH=$PATH:/opt/homebrew/bin
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$HOME/.emacs.d/bin
 
 # use lf to switch directory, bind to ctrl + o
 lfcd () {
