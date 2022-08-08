@@ -43,6 +43,9 @@ set noswapfile
 " Always show statusline
 set laststatus=2
 
+" Auto scroll when close to top/end
+set scrolloff=8
+
 " Status line
 set statusline=%f      " path to the file
 set statusline+=\ -\   " seperator (<space>-<space>)
