@@ -3,10 +3,13 @@ set nocompatible
 " Load plugin
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
+Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
 " Set colorscheme
-colorscheme onedark
+colorscheme gruvbox
+
+set background=dark
 
 " Set relative line number
 set number relativenumber
