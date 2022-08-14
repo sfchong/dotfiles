@@ -31,6 +31,7 @@ alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
 alias zshr='source ~/.zshrc'
 alias ls='ls -G'
 alias vi='nvim'
+alias lg='lazygit'
 
 # Add arm64 homebrew path
 eval $(/opt/homebrew/bin/brew shellenv)
