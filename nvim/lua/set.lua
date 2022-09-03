@@ -23,6 +23,9 @@ vim.opt.scrolloff = 8
 
 vim.opt.clipboard = "unnamedplus"
 
+-- enable mouse
+vim.opt.mouse = "a"
+
 vim.g.wildignorecase = true
 -- vim.g.wildmenu = true
 -- vim.g.wildmode = "longest:full,full"
