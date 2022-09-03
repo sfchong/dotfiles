@@ -3,7 +3,7 @@ require("packer").startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Colorscheme section
-    use("gruvbox-community/gruvbox")
+    use "ellisonleao/gruvbox.nvim"
 
     use("nvim-lua/plenary.nvim")
     use("nvim-telescope/telescope.nvim")
@@ -49,5 +49,15 @@ require("packer").startup(function(use)
     use("L3MON4D3/LuaSnip")
     use 'jose-elias-alvarez/null-ls.nvim'
 
+    -- Toggleterm
     use("akinsho/toggleterm.nvim")
+
+    -- Git
+    use 'tpope/vim-fugitive'
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
+    }
 end)
