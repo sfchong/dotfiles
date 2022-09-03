@@ -26,6 +26,7 @@ require('telescope').setup{
         find_command = {'rg', '--files', '--hidden', '-g', '!.git'}
     },
     buffers = {
+      sort_lastused = true,
       mappings = {
           i = {
               ["<C-d>"] = "delete_buffer",
