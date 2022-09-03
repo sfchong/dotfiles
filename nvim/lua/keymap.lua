@@ -33,6 +33,9 @@ map("v", ">", ">gv")
 
 -- vim fugitive
 map("n", "<leader>gg", ":0Git<cr>")
+map("n", "<leader>gP", ":Git push<cr>")
+map("n", "<leader>gp", ":Git pull<cr>")
+map("n", "<leader>gf", ":Git fetch<cr>")
 
 -- exit terminal mode
 -- map("t", "<Esc>", [[<C-\><C-n><CR>]])
