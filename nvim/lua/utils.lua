@@ -1,7 +1,10 @@
 local M = {}
 
-function M.map(mode, lhs, rhs, opts)
+function M.map(mode, lhs, rhs, desc, opts)
     local options = { noremap = true }
+    if desc then 
+        options.desc = desc
+    end
     if opts then
         options = vim.tbl_extend("force", options, opts)
     end
