@@ -1,3 +1,5 @@
+local actions = require("telescope.actions")
+
 require('telescope').setup{
   defaults = {
     -- Default configuration for telescope goes here:
@@ -7,7 +9,8 @@ require('telescope').setup{
         -- map actions.which_key to <C-h> (default: <C-/>)
         -- actions.which_key shows the mappings for your picker,
         -- e.g. git_{create, delete, ...}_branch for the git_branches picker
-        ["<C-h>"] = "which_key"
+        ["<C-h>"] = "which_key",
+        ["<esc>"] = actions.close,
       }
     }
   },
@@ -22,7 +25,7 @@ require('telescope').setup{
     buffers = {
       mappings = {
           i = {
-              ["<C-d>"] = "delete_buffer"
+              ["<C-d>"] = "delete_buffer",
           }
       }
     }
@@ -47,22 +50,26 @@ local telescope = require('telescope.builtin')
 
 map('n', '<leader>ff', function() 
     telescope.find_files()
-end)
+end, 'Find files')
+
+map('n', '<leader><space>', function() 
+    telescope.find_files()
+end, 'Find files')
 
 map('n', '<leader>fg', function() 
     telescope.live_grep()
-end)
+end, 'Live grep')
 
-map('n', '<leader>fb', function() 
+map('n', '<leader>b', function() 
     telescope.buffers()
-end)
+end, 'List buffers')
 
-map('n', '<leader>fh', function() 
+map('n', '<leader>h', function() 
     telescope.help_tags()
-end)
+end, 'Help page')
 
 map('n', '<leader>fs', function()
     telescope.current_buffer_fuzzy_find()
-end)
+end, 'Find current file')
 
 map("n", "<leader>fe", ":Telescope file_browser<cr>")

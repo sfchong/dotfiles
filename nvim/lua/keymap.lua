@@ -6,21 +6,23 @@ map("i", "kj", "<esc>")
 map("x", "p", "\"_dP")
 
 -- exit vim
-map("n", "<leader>q", ":q<cr>")
-map("n", "<leader>Q", ":q!<cr>")
+map("n", "<leader>q", ":q<cr>", "Exit")
+map("n", "<leader>Q", ":q!<cr>", "Force exit")
 
--- switch buffer
-map("n", "<leader>bn", ":bnext<cr>")
-map("n", "<leader>bp", ":bprev<cr>")
+-- buffer
+map("n", "<leader>bn", ":bnext<cr>", 'Next buffer')
+map("n", "<leader>bp", ":bprev<cr>", 'Previous buffer')
+map("n", "<leader>bd", ":bd<cr>", 'Delete buffer')
+map("n", "<leader>bD", ":bd!<cr>", 'Force delete buffer')
 
 -- window
-map("n", "<leader>ws", "<C-w>s<cr>")
-map("n", "<leader>wv", "<C-w>v<cr>")
-map("n", "<leader>wh", "<C-w>h<cr>")
-map("n", "<leader>wj", "<C-w>j<cr>")
-map("n", "<leader>wk", "<C-w>k<cr>")
-map("n", "<leader>wl", "<C-w>l<cr>")
-map("n", "<leader>wq", "<C-w>q<cr>")
+map("n", "<leader>w", "<C-w>", "Window actions")
+
+-- save
+map("n", "<leader>s", ":w<cr>", "Save file")
+
+-- select all
+map("n", "<leader>a", "ggVG", "Select all")
 
 -- exit terminal mode
 map("t", "<Esc>", [[<C-\><C-n><CR>]])
