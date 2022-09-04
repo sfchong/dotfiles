@@ -5,6 +5,10 @@ map("i", "kj", "<esc>")
 -- prevent clipboard override by selected text when pasting
 map("x", "p", "\"_dP")
 
+-- no override clipboard when x
+map("n", "x", "\"_x")
+map("v", "x", "\"_x")
+
 -- exit vim
 map("n", "<leader>q", ":q<cr>", "Exit")
 map("n", "<leader>Q", ":q!<cr>", "Force exit")
@@ -13,7 +17,7 @@ map("n", "<leader>Q", ":q!<cr>", "Force exit")
 map("n", "<leader>bn", ":bnext<cr>", 'Next buffer')
 map("n", "<leader>bp", ":bprev<cr>", 'Previous buffer')
 map("n", "<leader>bc", ":bd<cr>", 'Delete buffer')
-map("n", "<leader>bc", ":bd!<cr>", 'Force delete buffer')
+map("n", "<leader>bC", ":bd!<cr>", 'Force delete buffer')
 
 -- window
 map("n", "<leader>w", "<C-w>", "Window actions")
