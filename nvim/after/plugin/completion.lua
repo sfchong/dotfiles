@@ -38,6 +38,10 @@ cmp.setup({
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {
+    formatting = {
+        -- Only show the completion itself, no icon, no completion source
+        fields = { 'abbr' },
+    },
     mapping = cmp.mapping.preset.cmdline({
         ['<Down>'] = { c = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }) },
         ['<Up>'] = { c = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }) },
@@ -49,6 +53,10 @@ cmp.setup.cmdline('/', {
 
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(':', {
+    formatting = {
+        -- Only show the completion itself, no icon, no completion source
+        fields = { 'abbr' },
+    },
     mapping = cmp.mapping.preset.cmdline({
         ['<Down>'] = { c = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }) },
         ['<Up>'] = { c = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }) },
