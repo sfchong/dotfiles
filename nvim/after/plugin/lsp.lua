@@ -27,6 +27,24 @@ end
 -- nvim-cmp supports additional completion capabilities
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+-- show diagnostics message in float
+vim.diagnostic.config({
+	virtual_text = false,
+	signs = true,
+	float = {
+		border = "single",
+		format = function(diagnostic)
+			return string.format(
+				"%s (%s) [%s]",
+				diagnostic.message,
+				diagnostic.source,
+				diagnostic.code or diagnostic.user_data.lsp.code
+			)
+		end,
+	},
+})
+map("n", "<leader>e", function() vim.diagnostic.open_float() end, "Show error popup")
+
 require("lspconfig").tsserver.setup {
     capabilities = capabilities,
     on_attach = on_attach
