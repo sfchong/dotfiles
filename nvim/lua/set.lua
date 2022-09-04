@@ -27,8 +27,8 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.mouse = "a"
 
 vim.g.wildignorecase = true
--- vim.g.wildmenu = true
--- vim.g.wildmode = "longest:full,full"
+
+vim.opt.signcolumn="yes:1"
 
 -- use space as leader key
 vim.g.mapleader = " "
