@@ -29,19 +29,19 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 
 -- show diagnostics message in float
 vim.diagnostic.config({
-	virtual_text = false,
-	signs = true,
-	float = {
-		border = "single",
-		format = function(diagnostic)
-			return string.format(
-				"%s (%s) [%s]",
-				diagnostic.message,
-				diagnostic.source,
-				diagnostic.code or diagnostic.user_data.lsp.code
-			)
-		end,
-	},
+    virtual_text = false,
+    signs = true,
+    float = {
+        border = "single",
+        format = function(diagnostic)
+            return string.format(
+                "%s (%s) [%s]",
+                diagnostic.message,
+                diagnostic.source,
+                diagnostic.code or diagnostic.user_data.lsp.code
+            )
+        end,
+    },
 })
 map("n", "<leader>e", function() vim.diagnostic.open_float() end, "Show error popup")
 

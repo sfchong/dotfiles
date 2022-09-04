@@ -2,7 +2,7 @@ local M = {}
 
 function M.map(mode, lhs, rhs, desc, opts)
     local options = { noremap = true }
-    if desc then 
+    if desc then
         options.desc = desc
     end
     if opts then
@@ -13,3 +13,4 @@ function M.map(mode, lhs, rhs, desc, opts)
 end
 
 return M
+

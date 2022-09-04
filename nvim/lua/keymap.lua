@@ -44,19 +44,19 @@ map("n", "<leader>gf", ":Git fetch<cr>")
 -- netrw
 map("n", "<F2>", "<cmd>Lexplore<cr>")
 vim.api.nvim_create_autocmd('filetype', {
-  pattern = 'netrw',
-  desc = 'Better mappings for netrw',
-  callback = function()
-    local bind = function(lhs, rhs)
-      vim.keymap.set('n', lhs, rhs, {remap = true, buffer = true})
-    end 
+    pattern = 'netrw',
+    desc = 'Better mappings for netrw',
+    callback = function()
+        local bind = function(lhs, rhs)
+            vim.keymap.set('n', lhs, rhs, { remap = true, buffer = true })
+        end
 
-    -- edit new file
-    bind('n', '%')
+        -- edit new file
+        bind('n', '%')
 
-    -- rename file
-    bind('r', 'R')
-  end
+        -- rename file
+        bind('r', 'R')
+    end
 })
 
 -- exit terminal mode

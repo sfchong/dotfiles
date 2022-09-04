@@ -7,3 +7,4 @@ require("toggleterm").setup({
 
 map('n', '<leader>tv', ':ToggleTerm direction=vertical size=60<cr>')
 map('n', '<leader>th', ':ToggleTerm direction=horizontal<cr>')
+

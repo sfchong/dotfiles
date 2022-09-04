@@ -28,7 +28,7 @@ vim.opt.mouse = "a"
 
 vim.g.wildignorecase = true
 
-vim.opt.signcolumn="yes:1"
+vim.opt.signcolumn = "yes:1"
 
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 20
