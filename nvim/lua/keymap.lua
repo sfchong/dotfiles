@@ -1,7 +1,5 @@
 local map = require("utils").map
 
-map("i", "kj", "<esc>")
-
 -- prevent clipboard override by selected text when pasting
 map("x", "p", "\"_dP")
 
