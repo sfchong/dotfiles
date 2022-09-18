@@ -81,3 +81,13 @@ require("lspconfig").sumneko_lua.setup({
         },
     },
 })
+
+require 'lspconfig'.cssls.setup {
+    capabilities = capabilities,
+    on_attach = on_attach
+}
+
+require 'lspconfig'.svelte.setup {
+    capabilities = capabilities,
+    on_attach = on_attach
+}

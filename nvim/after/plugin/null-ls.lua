@@ -7,7 +7,10 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
     sources = {
-        formatting.prettier,
+        formatting.prettier.with({
+            filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "css", "scss", "less",
+                "html", "json", "jsonc", "yaml", "markdown", "markdown.mdx", "graphql", "handlebars"}
+        }),
         diagnostics.eslint,
         formatting.gofmt,
     },
