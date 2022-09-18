@@ -12,7 +12,8 @@ require('telescope').setup {
                 ["<C-h>"] = "which_key",
                 ["<esc>"] = actions.close,
             }
-        }
+        },
+        file_ignore_patterns = { "node_modules/" }
     },
     pickers = {
         -- Default configuration for builtin pickers goes here:
