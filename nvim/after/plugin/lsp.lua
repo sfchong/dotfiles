@@ -20,12 +20,12 @@ local on_attach = function(client, bufnr)
     map('n', '<space>cd', function() telescope.diagnostics() end, 'Lists Diagnostics', bufopts)
 
     if client.name == 'tsserver' or client.name == 'gopls' then
-        client.resolved_capabilities.document_formatting = false
+        client.server_capabilities.documentFormattingProvider = false
     end
 end
 
 -- nvim-cmp supports additional completion capabilities
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- show diagnostics message in float
 vim.diagnostic.config({
