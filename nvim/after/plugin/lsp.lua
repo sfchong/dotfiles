@@ -1,4 +1,8 @@
-local telescope = require('telescope.builtin')
+local status_cmp, cmp = pcall(require, 'cmp_nvim_lsp')
+local status_lspconfig, lspconfig = pcall(require, 'lspconfig')
+local status_telescope, telescope = pcall(require, 'telescope.builtin')
+if (not status_cmp or not status_lspconfig or not status_telescope) then return end
+
 local map = require("utils").map
 
 local on_attach = function(client, bufnr)
@@ -25,7 +29,7 @@ local on_attach = function(client, bufnr)
 end
 
 -- nvim-cmp supports additional completion capabilities
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local capabilities = cmp.default_capabilities()
 
 -- show diagnostics message in float
 vim.diagnostic.config({
@@ -45,17 +49,17 @@ vim.diagnostic.config({
 })
 map("n", "<leader>e", function() vim.diagnostic.open_float() end, "Show error popup")
 
-require("lspconfig").tsserver.setup {
+lspconfig.tsserver.setup {
     capabilities = capabilities,
     on_attach = on_attach
 }
 
-require("lspconfig").gopls.setup {
+lspconfig.gopls.setup {
     capabilities = capabilities,
     on_attach = on_attach
 }
 
-require("lspconfig").sumneko_lua.setup({
+lspconfig.sumneko_lua.setup({
     capabilities = capabilities,
     on_attach = on_attach,
     cmd = { 'lua-language-server' },
@@ -82,12 +86,12 @@ require("lspconfig").sumneko_lua.setup({
     },
 })
 
-require 'lspconfig'.cssls.setup {
+lspconfig.cssls.setup {
     capabilities = capabilities,
     on_attach = on_attach
 }
 
-require 'lspconfig'.svelte.setup {
+lspconfig.svelte.setup {
     capabilities = capabilities,
     on_attach = on_attach
 }
