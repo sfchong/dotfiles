@@ -1,7 +1,10 @@
 # dotfiles
-My personal dotfiles.
+Clone this project and create symlink to config location
 
-Use at your own risk 🙂.
+Example:
+```
+ln -s $HOME/dotfiles/nvim $HOME/.config/nvim
+```
 
 ## tmux
 Install [TPM](https://github.com/tmux-plugins/tpm)
@@ -38,3 +41,15 @@ To update treesitter
 ```
 :TSUpdate
 ```
+
+## nnn
+Compile from source
+```
+make O_GITSTATUS=1 O_NERD=1
+```
+
+Use alias `n` for cd on quit
+
+In nnn, press `n + f` to create new file
+
+Use `b` to access bookmark, `;` to access plugin key

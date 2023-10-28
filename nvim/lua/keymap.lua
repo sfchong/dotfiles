@@ -40,7 +40,7 @@ map("n", "<leader>gp", ":Git pull<cr>")
 map("n", "<leader>gf", ":Git fetch<cr>")
 
 -- netrw
-map("n", "<F2>", "<cmd>Lexplore<cr>")
+-- map("n", "<F2>", "<cmd>Lexplore<cr>")
 vim.api.nvim_create_autocmd('filetype', {
     pattern = 'netrw',
     desc = 'Better mappings for netrw',
