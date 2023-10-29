@@ -56,6 +56,9 @@ packer.startup(function(use)
     use("L3MON4D3/LuaSnip")
     use 'jose-elias-alvarez/null-ls.nvim'
 
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
+
     -- Toggleterm
     use("akinsho/toggleterm.nvim")
 
