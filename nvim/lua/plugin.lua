@@ -73,5 +73,7 @@ packer.startup(function(use)
 
     use("rmagatti/auto-session")
 
+    use 'mbbill/undotree'
+
     use("luukvbaal/nnn.nvim")
 end)
