@@ -41,8 +41,6 @@ eval $(/opt/homebrew/bin/brew shellenv)
 
 # GO Path
 export GOPATH=$HOME/go-workspace
-
-# Path
 export PATH=$PATH:$GOPATH/bin
 
 # nnn
