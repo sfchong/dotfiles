@@ -76,11 +76,12 @@ packer.startup(function(use)
     -- icon
     use 'nvim-tree/nvim-web-devicons'
 
-    use("rmagatti/auto-session")
+    use 'rmagatti/auto-session' 
 
     use 'mbbill/undotree'
 
-    use("luukvbaal/nnn.nvim")
+    use 'luukvbaal/nnn.nvim'
+    use 'ThePrimeagen/harpoon'
 
     use 'ellisonleao/glow.nvim'
 end)
