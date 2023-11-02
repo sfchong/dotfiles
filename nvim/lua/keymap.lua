@@ -12,8 +12,8 @@ map("n", "<leader>q", ":q<cr>", "Exit")
 map("n", "<leader>Q", ":q!<cr>", "Force exit")
 
 -- buffer
-map("n", "<leader>n", ":bnext<cr>", 'Next buffer')
-map("n", "<leader>,", ":bprev<cr>", 'Previous buffer')
+map("n", "<leader>bn", ":bnext<cr>", 'Next buffer')
+map("n", "<leader>b,", ":bprev<cr>", 'Previous buffer')
 map("n", "<leader>bx", ":bd<cr>", 'Delete buffer')
 map("n", "<leader>bX", ":bd!<cr>", 'Force delete buffer')
 
@@ -22,6 +22,7 @@ map("n", "<leader>w", "<C-w>", "Window actions")
 
 -- save
 map("n", "<leader>s", ":w<cr>", "Save file")
+map("n", "<leader>S", ":wq<cr>", "Save and quit")
 
 -- select all
 map("n", "<leader>a", "ggVG", "Select all")
@@ -33,8 +34,12 @@ map("n", "U", "<C-r>", "Redo")
 map("v", "<", "<gv")
 map("v", ">", ">gv")
 
+-- re-center after scroll
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+
 -- vim fugitive
-map("n", "<leader>gg", ":0Git<cr>")
+-- map("n", "<leader>gg", ":0Git<cr>")
 map("n", "<leader>gP", ":Git push<cr>")
 map("n", "<leader>gp", ":Git pull<cr>")
 map("n", "<leader>gf", ":Git fetch<cr>")
