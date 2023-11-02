@@ -2,7 +2,7 @@ local status, nnn = pcall(require, "nnn")
 if (not status) then return end
 
 nnn.setup({
-    explorer = { cmd = "nnn -eoH", session = "shared", side = "topleft" },
+    explorer = { cmd = "nnn -eoH", session = "", side = "topleft", width = 32 },
     picker = { cmd = "nnn -eoHd", style = { border = "rounded" }, tabs = false },
     mappings = {
         { "<C-t>", nnn.builtin.open_in_tab },       -- open file(s) in tab
