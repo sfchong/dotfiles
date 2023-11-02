@@ -76,4 +76,6 @@ packer.startup(function(use)
     use 'mbbill/undotree'
 
     use("luukvbaal/nnn.nvim")
+
+    use 'ellisonleao/glow.nvim'
 end)
