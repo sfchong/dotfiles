@@ -70,6 +70,11 @@ packer.startup(function(use)
             require('gitsigns').setup()
         end
     }
+    use 'NeogitOrg/neogit'
+    use 'sindrets/diffview.nvim'
+
+    -- icon
+    use 'nvim-tree/nvim-web-devicons'
 
     use("rmagatti/auto-session")
 
