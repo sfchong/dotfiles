@@ -63,3 +63,6 @@ map('n', '<leader>bb', function() telescope.buffers() end, 'List buffers')
 map('n', '<leader>h', function() telescope.help_tags() end, 'Help page')
 map('n', '<leader>fs', function() telescope.current_buffer_fuzzy_find() end, 'Find current file')
 map("n", "<leader>fe", ":Telescope file_browser<cr>")
+
+map('n', '<space>cd', function() telescope.diagnostics() end, 'Lists Diagnostics')
+

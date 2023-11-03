@@ -21,7 +21,6 @@ local on_attach = function(client, bufnr)
     map('n', '<leader>cr', vim.lsp.buf.rename, 'Rename', bufopts)
     map('n', '<leader>.', vim.lsp.buf.code_action, 'Code action', bufopts)
     map('n', '<space>cf', vim.lsp.buf.formatting, 'Format', bufopts)
-    map('n', '<space>cd', function() telescope.diagnostics() end, 'Lists Diagnostics', bufopts)
 
     if client.name == 'tsserver' or client.name == 'gopls' then
         client.server_capabilities.documentFormattingProvider = false
@@ -47,7 +46,7 @@ vim.diagnostic.config({
         end,
     },
 })
-map("n", "<leader>e", function() vim.diagnostic.open_float() end, "Show error popup")
+map("n", "<leader>ce", function() vim.diagnostic.open_float() end, "Show error popup")
 
 lspconfig.tsserver.setup {
     capabilities = capabilities,

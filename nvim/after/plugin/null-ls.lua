@@ -12,7 +12,8 @@ null_ls.setup({
             filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "css", "scss", "less",
                 "html", "json", "jsonc", "yaml", "markdown", "markdown.mdx", "graphql", "handlebars"}
         }),
-        diagnostics.eslint,
+        diagnostics.eslint_d,
+        formatting.eslint_d,
         formatting.gofmt,
     },
     on_attach = function(client, bufnr)
