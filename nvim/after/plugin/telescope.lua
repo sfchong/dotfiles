@@ -63,6 +63,10 @@ map('n', '<leader>fg', function() telescope_builtin.live_grep() end, 'Live grep'
 map('n', '<leader>bb', function() telescope_builtin.buffers() end, 'List buffers')
 map('n', '<leader>h', function() telescope_builtin.help_tags() end, 'Help page')
 map('n', '<leader>fn', function() telescope_builtin.current_buffer_fuzzy_find() end, 'Find current file')
+map('n', '<leader>ft', function () telescope_builtin.tagstack() end, 'List tagstack')
+map('n', '<leader>fo', function () telescope_builtin.jumplist() end, 'List jumplist')
+map('n', '<leader>fs', function () telescope_builtin.treesitter() end, 'List treesitter symbol')
+map('n', '<leader>fr', function () telescope_builtin.resume() end, 'Resume telescope')
 map("n", "<leader>fe", ":Telescope file_browser<cr>")
 
 map('n', '<space>cd', function() telescope_builtin.diagnostics() end, 'Lists Diagnostics')
