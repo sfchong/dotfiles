@@ -9,7 +9,7 @@ packer.startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Colorscheme section
-    use "ellisonleao/gruvbox.nvim"
+    use "eddyekofo94/gruvbox-flat.nvim"
 
     use("nvim-lua/plenary.nvim")
     use("nvim-telescope/telescope.nvim")

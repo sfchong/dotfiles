@@ -10,7 +10,7 @@ custom_gruvbox.visual.c.bg = '#3c3836' --darkgray
 lualine.setup {
     options = {
         icons_enabled = false,
-        theme = custom_gruvbox
+        theme = 'gruvbox-flat'
     },
     sections = {
         lualine_c = {

@@ -1,25 +1,3 @@
-local status, gruvbox = pcall(require, "gruvbox")
-if (not status) then return end
-
-gruvbox.setup({
-    undercurl = true,
-    underline = true,
-    bold = true,
-    italic = {
-        strings = true,
-        emphasis = true,
-        comments = true,
-        operators = false,
-        folds = true,
-    },
-    strikethrough = true,
-    invert_selection = false,
-    invert_signs = false,
-    invert_tabline = false,
-    invert_intend_guides = false,
-    inverse = true,    -- invert background for search, diffs, statuslines and errors
-    contrast = "hard", -- can be "hard", "soft" or empty string
-    overrides = {},
-})
-
-pcall(vim.cmd, "colorscheme gruvbox")
+vim.g.gruvbox_flat_style = "hard"
+vim.g.gruvbox_transparent = true
+vim.cmd[[colorscheme gruvbox-flat]]
