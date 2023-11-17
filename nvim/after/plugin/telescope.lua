@@ -51,18 +51,19 @@ telescope.setup {
 }
 
 require('telescope').load_extension "file_browser"
+require('telescope').load_extension 'harpoon'
 
 -- keymap
 local map = require("utils").map
-local telescope = require('telescope.builtin')
+local telescope_builtin = require('telescope.builtin')
 
-map('n', '<leader>ff', function() telescope.find_files() end, 'Find files')
-map('n', '<leader><space>', function() telescope.find_files() end, 'Find files')
-map('n', '<leader>fg', function() telescope.live_grep() end, 'Live grep')
-map('n', '<leader>bb', function() telescope.buffers() end, 'List buffers')
-map('n', '<leader>h', function() telescope.help_tags() end, 'Help page')
-map('n', '<leader>fs', function() telescope.current_buffer_fuzzy_find() end, 'Find current file')
+map('n', '<leader>ff', function() telescope_builtin.find_files() end, 'Find files')
+map('n', '<leader><space>', function() telescope_builtin.find_files() end, 'Find files')
+map('n', '<leader>fg', function() telescope_builtin.live_grep() end, 'Live grep')
+map('n', '<leader>bb', function() telescope_builtin.buffers() end, 'List buffers')
+map('n', '<leader>h', function() telescope_builtin.help_tags() end, 'Help page')
+map('n', '<leader>fn', function() telescope_builtin.current_buffer_fuzzy_find() end, 'Find current file')
 map("n", "<leader>fe", ":Telescope file_browser<cr>")
 
-map('n', '<space>cd', function() telescope.diagnostics() end, 'Lists Diagnostics')
+map('n', '<space>cd', function() telescope_builtin.diagnostics() end, 'Lists Diagnostics')
 
