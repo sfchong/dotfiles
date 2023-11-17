@@ -9,6 +9,7 @@ custom_gruvbox.visual.c.bg = '#3c3836' --darkgray
 
 lualine.setup {
     options = {
+        icons_enabled = false,
         theme = custom_gruvbox
     },
     sections = {
@@ -18,7 +19,8 @@ lualine.setup {
                 file_status = true, -- displays file status (readonly status, modified status)
                 path = 1 -- 0 = just filename, 1 = relative path, 2 = absolute path
             }
-        }
+        },
+        lualine_x = {'', 'fileformat', 'filetype'},
     }
 }
 
