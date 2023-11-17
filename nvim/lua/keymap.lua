@@ -39,6 +39,9 @@ map("v", ">", ">gv")
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
 
+-- disable q:
+map("n", "q:", "<nop>")
+
 -- vim fugitive
 -- map("n", "<leader>gg", ":0Git<cr>")
 map("n", "<leader>gP", ":Git push<cr>")
