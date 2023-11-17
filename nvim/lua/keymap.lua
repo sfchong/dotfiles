@@ -3,9 +3,10 @@ local map = require("utils").map
 -- prevent clipboard override by selected text when pasting
 map("x", "p", "\"_dP")
 
--- no override clipboard when x
+-- no override clipboard when x and c
 map("n", "x", "\"_x")
 map("v", "x", "\"_x")
+map("n", "c", "\"_c")
 
 -- exit vim
 map("n", "<leader>q", ":q<cr>", "Exit")
