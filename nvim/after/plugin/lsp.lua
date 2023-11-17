@@ -1,7 +1,9 @@
 local status_cmp, cmp = pcall(require, 'cmp_nvim_lsp')
+local status_mason_lspconfig, mason_lspconfig = pcall(require, 'mason-lspconfig')
 local status_lspconfig, lspconfig = pcall(require, 'lspconfig')
 local status_telescope, telescope = pcall(require, 'telescope.builtin')
-if (not status_cmp or not status_lspconfig or not status_telescope) then return end
+
+if (not status_cmp or not status_mason_lspconfig or not status_lspconfig or not status_telescope) then return end
 
 local map = require("utils").map
 
@@ -32,71 +34,60 @@ local capabilities = cmp.default_capabilities()
 
 -- show diagnostics message in float
 vim.diagnostic.config({
-    virtual_text = false,
+    virtual_text = true,
     signs = true,
-    float = {
-        border = "single",
-        format = function(diagnostic)
-            return string.format(
-                "%s (%s) [%s]",
-                diagnostic.message,
-                diagnostic.source,
-                diagnostic.code or diagnostic.user_data.lsp.code
-            )
-        end,
-    },
+    -- float = {
+    --     border = "single",
+    --     format = function(diagnostic)
+    --         return string.format(
+    --             "%s (%s) [%s]",
+    --             diagnostic.message,
+    --             diagnostic.source,
+    --             diagnostic.code or diagnostic.user_data.lsp.code
+    --         )
+    --     end,
+    -- },
 })
 map("n", "<leader>ce", function() vim.diagnostic.open_float() end, "Show error popup")
 
-lspconfig.tsserver.setup {
+local lsp_options = {
     capabilities = capabilities,
     on_attach = on_attach
 }
 
-lspconfig.gopls.setup {
-    capabilities = capabilities,
-    on_attach = on_attach
-}
-
-lspconfig.lua_ls.setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-    cmd = { 'lua-language-server' },
-    settings = {
-        Lua = {
-            runtime = {
-                -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-                version = "LuaJIT",
-                -- Setup your lua path
-                path = vim.split(package.path, ";"),
+mason_lspconfig.setup_handlers({
+    function (server_name)
+        lspconfig[server_name].setup(lsp_options)
+    end,
+    ["lua_ls"] = function ()
+        lspconfig.lua_ls.setup(vim.tbl_deep_extend("force", lsp_options, {
+            cmd = { 'lua-language-server' },
+            settings = {
+                Lua = {
+                    runtime = {
+                        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+                        version = "LuaJIT",
+                        -- Setup your lua path
+                        path = vim.split(package.path, ";"),
+                    },
+                    diagnostics = {
+                        -- Get the language server to recognize the `vim` global
+                        globals = { "vim" },
+                    },
+                    workspace = {
+                        -- Make the server aware of Neovim runtime files
+                        library = vim.api.nvim_get_runtime_file("", true),
+                    },
+                    telemetry = {
+                        enable = false,
+                    },
+                },
             },
-            diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = { "vim" },
-            },
-            workspace = {
-                -- Make the server aware of Neovim runtime files
-                library = vim.api.nvim_get_runtime_file("", true),
-            },
-            telemetry = {
-                enable = false,
-            },
-        },
-    },
+        }))
+    end,
+    ["omnisharp"] = function ()
+        lspconfig.omnisharp.setup(vim.tbl_deep_extend("force", lsp_options, {
+            cmd = { "dotnet", vim.fn.expand("$HOME/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll")},
+        }))
+    end
 })
-
-lspconfig.cssls.setup {
-    capabilities = capabilities,
-    on_attach = on_attach
-}
-
-lspconfig.svelte.setup {
-    capabilities = capabilities,
-    on_attach = on_attach
-}
-
-lspconfig.omnisharp.setup {
-    cmd = { "dotnet", vim.fn.expand("$HOME/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll")},
-    capabilities = capabilities,
-    on_attach = on_attach
-}
