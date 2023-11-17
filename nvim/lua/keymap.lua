@@ -66,5 +66,17 @@ vim.api.nvim_create_autocmd('filetype', {
     end
 })
 
+-- close all other buffers
+vim.api.nvim_create_user_command('BufferCloseOther',
+    function()
+        -- :w - save current buffer
+        -- %bd - close all the buffers_color
+        -- e# - open last edited files
+        -- bd# - close the unnamed buffer
+        vim.cmd[[:w|%bd|e#|bd#]]
+    end,
+    {}
+)
+
 -- exit terminal mode
 -- map("t", "<Esc>", [[<C-\><C-n><CR>]])
