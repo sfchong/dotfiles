@@ -41,3 +41,13 @@ vim.opt.splitbelow = true
 
 -- use space as leader key
 vim.g.mapleader = " "
+
+-- tab size for js and ts
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "javascript",
+	command = "setlocal shiftwidth=2 tabstop=2"
+})
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "typescript",
+	command = "setlocal shiftwidth=2 tabstop=2"
+})
