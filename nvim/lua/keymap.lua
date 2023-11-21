@@ -14,7 +14,9 @@ map("n", "<leader>Q", ":q!<cr>", "Force exit")
 
 -- buffer
 map("n", "<leader>bn", ":bnext<cr>", 'Next buffer')
+map("n", "<leader>n", ":bnext<cr>", 'Next buffer')
 map("n", "<leader>b,", ":bprev<cr>", 'Previous buffer')
+map("n", "<leader>,", ":bprev<cr>", 'Previous buffer')
 map("n", "<leader>bx", ":bd<cr>", 'Delete buffer')
 map("n", "<leader>bX", ":bd!<cr>", 'Force delete buffer')
 
