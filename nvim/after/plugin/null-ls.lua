@@ -30,3 +30,11 @@ null_ls.setup({
         end
     end,
 })
+
+vim.api.nvim_create_user_command('SaveWithoutFormatting',
+    function()
+        vim.cmd[[noautocmd write]]
+    end,
+    {}
+)
+
