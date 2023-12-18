@@ -14,6 +14,7 @@ null_ls.setup({
         }),
         diagnostics.eslint_d,
         formatting.eslint_d,
+        null_ls.builtins.code_actions.eslint_d,
         formatting.gofmt,
     },
     on_attach = function(client, bufnr)
