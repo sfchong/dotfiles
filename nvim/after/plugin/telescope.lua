@@ -29,6 +29,12 @@ telescope.setup {
         find_files = {
             find_command = { 'rg', '--files', '--hidden', '-g', '!.git' }
         },
+        live_grep = {
+            file_ignore_patterns = { 'node_modules', '.git' },
+            additional_args = function(_)
+                return { "--hidden" }
+            end
+        },
         buffers = {
             sort_lastused = true,
             mappings = {
