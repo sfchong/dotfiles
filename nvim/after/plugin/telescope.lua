@@ -42,6 +42,10 @@ telescope.setup {
                     ["<C-d>"] = "delete_buffer",
                 }
             }
+        },
+        lsp_references = {
+            -- fname_width = 100
+            show_line = false
         }
     },
     extensions = {
