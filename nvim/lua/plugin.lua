@@ -10,6 +10,7 @@ packer.startup(function(use)
 
     -- Colorscheme section
     use "eddyekofo94/gruvbox-flat.nvim"
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     use("nvim-lua/plenary.nvim")
     use("nvim-telescope/telescope.nvim")

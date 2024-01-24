@@ -46,6 +46,9 @@ telescope.setup {
         lsp_references = {
             -- fname_width = 100
             show_line = false
+        },
+        colorscheme = {
+            enable_preview = true
         }
     },
     extensions = {
@@ -77,6 +80,7 @@ map('n', '<leader>ft', function () telescope_builtin.tagstack() end, 'List tagst
 map('n', '<leader>fo', function () telescope_builtin.jumplist() end, 'List jumplist')
 map('n', '<leader>fs', function () telescope_builtin.treesitter() end, 'List treesitter symbol')
 map('n', '<leader>fr', function () telescope_builtin.resume() end, 'Resume telescope')
+map('n', '<leader>fc', function () telescope_builtin.colorscheme() end, 'List colorscheme')
 map("n", "<leader>fe", ":Telescope file_browser<cr>")
 
 map('n', '<space>cd', function() telescope_builtin.diagnostics() end, 'Lists Diagnostics')
