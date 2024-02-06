@@ -44,12 +44,6 @@ map("n", "<C-u>", "<C-u>zz")
 -- disable q:
 map("n", "q:", "<nop>")
 
--- vim fugitive
--- map("n", "<leader>gg", ":0Git<cr>")
-map("n", "<leader>gP", ":Git push<cr>")
-map("n", "<leader>gp", ":Git pull<cr>")
-map("n", "<leader>gf", ":Git fetch<cr>")
-
 -- netrw
 -- map("n", "<F2>", "<cmd>Lexplore<cr>")
 vim.api.nvim_create_autocmd('filetype', {

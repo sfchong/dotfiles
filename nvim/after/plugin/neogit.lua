@@ -5,4 +5,4 @@ local map = require("utils").map
 
 neogit.setup()
 
-map('n', '<leader>gg', function () neogit.open() end, 'Neogit')
+map('n', '<leader>g', function () neogit.open() end, 'Neogit')
