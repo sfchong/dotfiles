@@ -5,7 +5,7 @@ Clone this project and create symlink to config location
 Example:
 
 ```
-ln -s $HOME/dotfiles/nvim $HOME/.config/nvim
+ln -s $PWD/.zshrc $HOME/.zshrc
 ```
 
 ## tmux
@@ -36,29 +36,6 @@ prefix + c = create window
 prefix + x = delete window
 prefix + ? = help window
 ```
-
-## neovim
-
-This neovim config uses Packer as plugin manager. First, go to https://github.com/wbthomason/packer.nvim and follow the instruction to install Packer.
-
-To update or sync package
-
-```
-:PackerSync
-```
-
-To update treesitter
-
-```
-:TSUpdate
-```
-
-### dependency
-
-- ripgrep
-- fd
-- glow
-- nnn
 
 ## nnn
 
