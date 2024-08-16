@@ -34,11 +34,12 @@ alias ls='ls --color=auto'
 alias vi='nvim'
 alias lg='lazygit'
 
+DIR=$(dirname "$(readlink -f "$HOME/.zshrc")")
+
 # Load Mac specific config
 if [[ $(uname) == "Darwin" ]]; then
-    source ./zsh/mac.zsh
+    source ${DIR}/zsh/mac.zsh
 fi
 
-DIR=$(dirname "$(readlink -f "$HOME/.zshrc")")
 source ${DIR}/zsh/nnn.zsh
 
