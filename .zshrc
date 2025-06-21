@@ -41,5 +41,6 @@ if [[ $(uname) == "Darwin" ]]; then
     source ${DIR}/zsh/mac.zsh
 fi
 
-source ${DIR}/zsh/nnn.zsh
+# source ${DIR}/zsh/nnn.zsh
+source ${DIR}/zsh/yazi.zsh
 
