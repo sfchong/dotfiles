@@ -43,4 +43,5 @@ fi
 
 # source ${DIR}/zsh/nnn.zsh
 source ${DIR}/zsh/yazi.zsh
+source ${DIR}/zsh/lang.zsh
 
